@@ -163,3 +163,91 @@ This JSON structure provides a clear and organized way to define UI components a
 
 **Document Version**: Matches `theme_version` **1.0**  
 **Last Updated**: Corresponds to `published` date **2024-01-01**
+
+
+JSON Example:
+
+{
+    "theme_version": "1.0",
+    "published": "2024-01-01",
+    "data": {
+      "components_statics": {
+        "mainmenu": {
+          "description": "Grupo de componentes para el menú principal",
+          "components": [
+            {
+              "name": "mainmenu_thumb",
+              "type": "HorizontalArrangement",
+              "parent": "main"
+            },
+            {
+              "name": "mainmenu_thumb_glow",
+              "type": "HorizontalArrangement",
+              "parent": "mainmenu_thumb"
+            },
+            {
+              "name": "mainmenu_metadata_content",
+              "type": "VerticalArrangement",
+              "parent": "mainmenu_thumb"
+            },
+            {
+              "name": "mainmenu_metadata_title",
+              "type": "Label",
+              "parent": "mainmenu_metadata_content"
+            },
+            {
+              "name": "mainmenu_metadata_artist_name",
+              "type": "Label",
+              "parent": "mainmenu_metadata_content"
+            }
+          ]
+        },
+        "library_navigation_bar": {
+          "description": "Barra de navegación de la biblioteca",
+          "components": []
+        }
+      },
+      "components_recycler": {
+        "library_track_item": {
+          "description": "Plantilla para un ítem de pista en la biblioteca",
+          "components": [
+            {
+              "name": "library_track_content",
+              "type": "HorizontalArrangement",
+              "parent": "main"
+            },
+            {
+              "name": "library_track_cover",
+              "type": "HorizontalArrangement",
+              "parent": "library_track_content"
+            },
+            {
+              "name": "library_track_meta",
+              "type": "VerticalArrangement",
+              "parent": "library_track_content"
+            },
+            {
+              "name": "library_track_title",
+              "type": "Label",
+              "parent": "library_track_meta"
+            },
+            {
+              "name": "library_track_artist",
+              "type": "Label",
+              "parent": "library_track_meta"
+            },
+            {
+              "name": "library_track_menu",
+              "type": "HorizontalArrangement",
+              "parent": "library_track_content"
+            }
+          ]
+        },
+        "library_album_item": {
+          "description": "Plantilla para un ítem de álbum",
+          "components": []
+        }
+      }
+    }
+  }
+  
